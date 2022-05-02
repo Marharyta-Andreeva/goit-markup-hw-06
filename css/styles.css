@@ -793,7 +793,7 @@ textarea {
     margin-right: auto;
 }
 
-.form-field {
+.modal-form-box {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -808,7 +808,7 @@ textarea {
     margin-bottom: 4px;
 }
 
-.text-field {
+.modal-input {
     padding: 11px 12px;
     background-color: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
