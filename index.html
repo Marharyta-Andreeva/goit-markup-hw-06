@@ -370,8 +370,14 @@
                 </div>
                 
                 <div class="modal-privacy">
-                <input type="checkbox" class="modal-checkbox" name="policy" id="policy">
-                <label for="policy" class="modal-privacy-text">Соглашаюсь с рассылкой и принимаю <a href="" class="modal-privacy-link link"> Условия договора</a></label>
+                <input type="checkbox" class="modal-checkbox visually-hidden" name="policy" id="policy" value="policy">
+                <label for="policy" class="modal-privacy-text">
+                    <span>
+                        <svg class="modal-check-icon" width="11" height="8">
+                            <use href="./images/icons.svg#icon-checkmark"></use>
+                        </svg>
+                    </span>
+                    Соглашаюсь с рассылкой и принимаю <a href="" class="modal-privacy-link link"> Условия договора</a></label>
                 </div>
 
             <button type="submit" class="modal-bottom-btn">Отправить</button>

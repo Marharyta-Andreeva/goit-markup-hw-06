@@ -67,6 +67,19 @@ textarea {
     padding-bottom: 94px;
 }
 
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
 /*------------------------------------------HEADER------------------------------------------*/
 
 .header {
@@ -240,19 +253,6 @@ textarea {
 
 .hero-btn:hover{
     background-color: var(--btn-hover-color);
-}
-
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
 }
 
 /*------------------------------------------ABOUT------------------------------------------*/
@@ -674,14 +674,24 @@ textarea {
 }
 
 .footer-field {
-    padding: 15px 16px;
     width: 358px;
     height: 50px;
+    padding-left: 16px;
     margin-right: 12px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+}
+
+.footer-field::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;    
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;    
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-btn-icon {
@@ -847,18 +857,16 @@ textarea {
     transition: border-color var(--transition-options);
 }
 
+.modal-comment::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;    
+    color: rgba(117, 117, 117, 0.5);
+}
+
 .modal-comment:focus {
     border-color: var(--accent-color);
-}
-
-.modal-privacy {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-checkbox {
-    margin-right: 8px;
 }
 
 .modal-privacy-text {
@@ -867,11 +875,44 @@ textarea {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
 }
 
 .modal-privacy-link {
     color: var(--accent-color);
     text-decoration: underline;
+    margin-left: 3px;
+}
+
+.modal-privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-check-icon {
+    fill: transparent;
+}
+
+.modal-privacy-text span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-text-color);
+    border-radius: 3px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-checkbox:checked+.modal-privacy-text span {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.modal-checkbox:checked+.modal-privacy-text .modal-check-icon {
+    fill:var(--hero-color)
 }
 
 .modal-bottom-btn {
