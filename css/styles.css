@@ -682,6 +682,7 @@ textarea {
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    color: var(--hero-color);
 }
 
 .footer-field::placeholder {
@@ -750,6 +751,7 @@ textarea {
 .modal {
     width: 528px;
     min-height: 581px;
+    padding: 40px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -788,7 +790,6 @@ textarea {
 }
 
 .modal-title {
-    padding-top: 40px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -796,12 +797,6 @@ textarea {
     letter-spacing: 0.03em;
     color: var(--main-text-color);
     margin-bottom: 12px;
-}
-
-.modal-form {
-    width: 448px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .modal-form-title {
@@ -814,6 +809,11 @@ textarea {
 
 .modal-form-box {
     position: relative;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.modal-comment-box {
     margin-top: 4px;
 }
 
@@ -833,7 +833,6 @@ textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 10px;
     outline: none;
     transition: border-color var(--transition-options);
 }
