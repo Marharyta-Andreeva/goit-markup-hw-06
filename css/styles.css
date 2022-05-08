@@ -815,6 +815,7 @@ textarea {
 
 .modal-comment-box {
     margin-top: 4px;
+    margin-bottom: 20px;
 }
 
 .modal-input-icon {
@@ -852,7 +853,6 @@ textarea {
     box-sizing: border-box;
     border-radius: 4px;
     padding: 12px 16px;
-    margin-bottom: 20px;
     transition: border-color var(--transition-options);
 }
 
